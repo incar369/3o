@@ -13,7 +13,6 @@ module.exports = {
   },
   plugins: [new HtmlWebpackPlugin({ template: './src/html/index.html' })],
   mode: 'development',
-  //mode: 'production',
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist',
