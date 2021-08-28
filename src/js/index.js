@@ -17,7 +17,9 @@ let Eng=global.eng=new _eng()
 
 Eng.addModule(_gra)
 Eng.Gra.preinit()
-addObjects(150) //Eng.Gra.addObject(new _particle())
+
+addObjects(150,"prot",0x00ffff) //Eng.Gra.addObject(new _particle())
+addObjects(150,"netr",0xffff00)
 
 console.log(Eng)
 
@@ -31,9 +33,9 @@ function getRandomInt(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
-function addObjects(c){
+function addObjects(c,type,color){
     for(let i=0;i<c;i++){
-        Eng.Gra.addObject(new _particle(getRandomInt(-10,10),getRandomInt(-10,10),getRandomInt(-10,10)))
+        Eng.Gra.addObject(new _particle(getRandomInt(-10,10),getRandomInt(-10,10),getRandomInt(-10,10),type,color))
     }
 }
 
